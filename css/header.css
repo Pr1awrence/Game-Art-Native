@@ -1,0 +1,38 @@
+.header {
+    background-image: url("../accets/images/header_background_01.png");
+}
+.logo {
+    margin-left: 90px;
+    margin-right: 300px;
+    margin-top: 5px;
+}
+
+.red_line {
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+body, p {
+    margin: 0;
+}
+
+ul {
+    margin-top: 0;
+    display: flex;
+    list-style: none;
+    font-size: 30px;
+    font-family: Roboto, Arial;
+    color: white;
+}
+
+li {
+    cursor: pointer;
+    padding-top: 30px;
+}
+
+.card {
+    margin-top: 20px;
+    height: 62px;
+    width: 77px;
+
+}
