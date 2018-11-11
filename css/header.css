@@ -18,6 +18,7 @@ body, p {
 
 ul {
     margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     list-style: none;
     font-size: 30px;

@@ -1,0 +1,19 @@
+#slide {
+
+    width: 1920px;
+    height: 822px;
+}
+
+#main_body {
+    background-image: url("../accets/background/back slider.png");
+    padding-top: 20px;
+}
+
+#slider {
+    width: 1171px;
+    height: 659px;
+    border-radius: 15px;
+    display: block;
+    margin: 10px auto;
+    transition: all 1.0s ease-in-out;
+}
