@@ -1,19 +1,112 @@
 #slide {
-
-    width: 1920px;
-    height: 822px;
+    /*width: 1920px;*/
+    height: 815px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 #main_body {
     background-image: url("../accets/background/back slider.png");
-    padding-top: 20px;
+}
+
+
+.left {
+    background-image: url("../accets/slider/arrow_left.png");
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    align-self: center;
+    margin: 0 30px;
 }
 
 #slider {
-    width: 1171px;
-    height: 659px;
+    width: 1170px;
+    height: 660px;
     border-radius: 15px;
+    display: inline-block;
+    transition: all 1.0s ease;
+    margin: 60px 0;
+}
+
+.right {
+    background-image: url("../accets/slider/arrow_right.png");
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    align-self: center;
+    margin: 0 30px;
+}
+
+#topics {
+    background-image: url("../accets/images/header_background_01.png");
+}
+
+.headline {
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+}
+
+.text_red {
+    color: red;
+}
+
+#best_games_section {
+    background-image: url("../accets/body/background_main_body.png");
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 20px 60px;
+    flex-wrap: wrap;
+    /*Св-во wrap отвечает за отображение элементов внутри флекс блока*/
+    justify-content: center;
+    align-items: center;
+}
+
+.best_games_catalog {
+    width: 414px;
+    height: 515px;
+    background-color: #2c2d37;
+    margin: 20px;
+    text-align: center;
+}
+
+.img_best_games {
     display: block;
-    margin: 10px auto;
-    transition: all 1.0s ease-in-out;
+    margin: 25px auto 5px;
+}
+
+.best_games_text {
+    margin: 0 auto;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.best_games_text p{
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    font-size: 33px;
+    padding-top: 23px;
+    margin: 0 15px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.footer {
+    background-image: url("../accets/images/header_background_01.png");
+}
+
+.info {
+    display: flex;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 27px;
+    padding: 10px;
+    text-shadow: 2px 2px 3px black;
+    justify-content: center;
+    align-items: center;
 }
