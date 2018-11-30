@@ -31,3 +31,28 @@ window.onload = function () {
     }, 5000);
 
 };
+var menu = {
+    main: "main_body",
+    games: "games_body"
+};
+
+function showAnotherBody(id) {
+    switch (id) {
+        case menu.main:
+            hideBody(menu.games);
+            showBody(menu.main);
+            break;
+        case menu.games:
+            hideBody(menu.main);
+            showBody(menu.games);
+            break;
+    }
+
+    function showBody(id) {
+        document.getElementById(id).style.display = "";
+    }
+
+    function hideBody(id) {
+        document.getElementById(id).style.display = "none";
+    }
+}

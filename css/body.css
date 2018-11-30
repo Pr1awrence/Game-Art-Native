@@ -43,9 +43,10 @@
 }
 
 .headline {
-    font-family: "Roboto Medium", sans-serif;
+    font-family: "Roboto Black", sans-serif;
+    letter-spacing: 2px;
     font-size: 50px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     text-shadow: 2px 2px 3px black;
     color: white;
@@ -57,7 +58,6 @@
 
 #best_games_section {
     background-image: url("../accets/body/background_main_body.png");
-    display: -webkit-inline-flex;
     display: inline-flex;
     margin: 0 auto;
     padding: 20px 60px;
@@ -109,4 +109,139 @@
     text-shadow: 2px 2px 3px black;
     justify-content: center;
     align-items: center;
+}
+
+div#games_body {
+    background-image: url("../accets/background/body_games.png");
+    padding: 10px 0;
+    position: relative;
+}
+
+div#games_section {
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    /*Св-во wrap отвечает за отображение элементов внутри флекс блока*/
+    justify-content: center;
+    align-items: center;
+}
+
+.games_catalog {
+    width: 386px;
+    height: 644px;
+    background-color: #2c2d37;
+    margin: 20px 5px;
+    text-align: center;
+}
+
+.img_all_games {
+    display: block;
+    margin: 5px auto 5px;
+}
+
+.games_text {
+    display: inline-block;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: left;
+    width: 310px;
+    padding: 15px 10px 10px 10px;
+}
+
+.games_text_headline {
+    font-size: 25px;
+    font-family: "Roboto Medium", sans-serif;
+    text-align: center;
+}
+
+.price_line {
+    float: left;
+    margin: 20px 0 10px 0;
+}
+
+.games_text_old_price, .games_text_price {
+    margin: 20px 0 0 10px;
+}
+.games_text_old_price {
+    float: left;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 30px;
+    color: #807f80;
+    text-decoration: line-through;
+    padding: 0 20px 0 0;
+}
+
+.games_text_price {
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 30px;
+}
+
+.games_text_discount {
+    margin: 5px 0 20px 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    color: #c99d11;
+}
+
+.games_text_description {
+    float: left;
+    font-size: 19px;
+    font-family: "Roboto", sans-serif;
+    color: #807f80;
+}
+
+.games_text_price_no_sale {
+    margin: 35px 0 40px 25px;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 30px;
+}
+
+.games_text_description_no_sale {
+    float: left;
+    font-size: 19px;
+    font-family: "Roboto", sans-serif;
+    color: #807f80;
+}
+
+.block_video_review {
+    background-color: rgb(44, 45, 55);
+    width: 1495px;
+    height: 477px;
+    margin: 20px auto;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.video {
+    box-shadow: 0 0 10px black;
+}
+
+.block_video_text {
+    margin: auto 70px;
+    width: 550px;
+    /*height: 400px;*/
+    font-size: 50px;
+    font-family: "Roboto Medium", sans-serif;
+    color: white;
+}
+
+.headline_video {
+
+}
+
+.text_yellow {
+    color: #e9b606;
+}
+
+.video_description_line {
+    margin-bottom: 20px;
+}
+
+.video_description {
+    font-size: 22px;
+    font-family: "Roboto", sans-serif;
+    color: #807f80;
 }
