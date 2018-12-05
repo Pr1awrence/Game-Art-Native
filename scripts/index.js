@@ -25,6 +25,7 @@ var slider = {
 };
 
 window.onload = function () {
+    //добавить еще функцию для прогрузки картинок
     slider.init();
     setInterval(function () {
         slider.right();
@@ -33,18 +34,26 @@ window.onload = function () {
 };
 var menu = {
     main: "main_body",
-    games: "games_body"
+    games: "games_body",
+    faq: "faq_body"
 };
 
 function showAnotherBody(id) {
     switch (id) {
         case menu.main:
             hideBody(menu.games);
+            hideBody(menu.faq);
             showBody(menu.main);
             break;
         case menu.games:
             hideBody(menu.main);
+            hideBody(menu.faq);
             showBody(menu.games);
+            break;
+        case menu.faq:
+            hideBody(menu.main);
+            hideBody(menu.games);
+            showBody(menu.faq);
             break;
     }
 
@@ -54,5 +63,23 @@ function showAnotherBody(id) {
 
     function hideBody(id) {
         document.getElementById(id).style.display = "none";
+    }
+}
+
+//функция для search
+function myFunction() {
+    var input, filter, div, div2, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("faq_questions");
+    div2 = div.getElementsByTagName("div");
+    for (i = 0; i < div2.length; i++) {
+        a = div2[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            div2[i].style.display = "";
+        } else {
+            div2[i].style.display = "none";
+        }
     }
 }

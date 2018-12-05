@@ -245,3 +245,110 @@ div#games_section {
     font-family: "Roboto", sans-serif;
     color: #807f80;
 }
+
+div#faq_body {
+    background-image: url("../accets/background/body_games.png");
+    padding: 10px 0;
+    position: relative;
+}
+
+#form {
+    position: relative;
+    width: 720px;
+    height: 60px;
+    margin: 30px auto;
+}
+input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 2px solid gray;
+    border-radius: 5px 0 0 5px;
+    background: aliceblue;
+    width: 530px;
+    height: 60px;
+    padding-left: 10px;
+    font-size: 23px;
+    font-family: "Roboto", sans-serif;
+}
+
+#button_search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: 180px;
+    height: 58px;
+    color: white;
+    border: 0;
+    margin: 0;
+    background: #2e2b2f;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 23px;
+    font-family: "Roboto Medium", sans-serif;
+}
+
+#button_search_items {
+    display: flex;
+    justify-content: center;
+}
+
+#img_search {
+    padding-right: 10px;
+}
+
+#faq_questions {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    margin: 0 auto;
+    width: 1000px;
+    height: 1264px;
+    padding: 0 100px;
+}
+
+.line_question {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    size: 100%;
+}
+
+.question {
+    font-size: 25px;
+    font-family: "Roboto Medium", sans-serif;;
+    color: rgb(44, 45, 55);
+    line-height: 1.2;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.answer {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;;
+    color: rgb(44, 45, 55);
+    line-height: 1.2;
+    text-align: left;
+    margin: 20px 0;
+}
+
+
+
+#faq_questions div a {
+    font-size: 20px;
+    font-family: "Roboto Medium", sans-serif;;
+    color: rgb(44, 45, 55);
+    line-height: 1.2;
+    text-align: left;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+#faq_questions div a:hover:not(.header) {
+    background-color: #eee;
+}
