@@ -25,7 +25,7 @@
     height: 660px;
     border-radius: 15px;
     display: inline-block;
-    transition: all 1.0s ease;
+    transition: all 0.5s ease-out;
     margin: 60px 0;
 }
 
@@ -253,13 +253,13 @@ div#faq_body {
     min-height: 750px;
 }
 
-#form {
+#form_for_search {
     position: relative;
     width: 720px;
     height: 60px;
     margin: 30px auto;
 }
-input {
+#search_input {
     position: absolute;
     left: 0;
     top: 0;
@@ -313,7 +313,7 @@ input {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     opacity: 0.9;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     width: 1000px;
     /*height: 1264px;*/
     padding: 0 100px 15px 100px;
@@ -373,3 +373,104 @@ input {
     background-color: #eee;
 }*/
 
+#feedback_form {
+    position: relative;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    background-color: #2c2d37;
+    border-radius: 10px;
+    width: 650px;
+}
+
+.feedback_form_text {
+    padding: 20px 0 15px 48px;
+    font-size: 20px;
+    font-family: "Roboto Medium", sans-serif;;
+    color: white;
+    display: inline-block;
+}
+
+.feedback_user_data {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    width: 550px;
+    height: 35px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.feedback_user_message {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    width: 550px;
+    height: 75px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+#feedback_button {
+    display: block;
+    margin: 30px auto;
+    background: rgb(237, 28, 36);
+    width: 180px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+}
+
+#feedback_button_text {
+    padding: 10px;
+    font-size: 22px;
+    font-family: "Roboto Medium", sans-serif;;
+    color: white;
+}
+
+.feedback_form_success {
+    position: relative;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    background-color: #2c2d37;
+    border-radius: 10px;
+    width: 650px;
+}
+
+.feedback_form_success h1{
+    padding: 10px;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.feedback_form_success h2{
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Roboto Thin", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.feedback_success_image{
+    display: block;
+    margin: 10px auto;
+}
+
+.error input,
+.error textarea {
+    border: 1px solid red;
+}
+
+
+.error_empty {
+    display: none;
+}
+
+.error_message {
+    display: inline;
+    color: red;
+    padding-left: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}

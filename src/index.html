@@ -250,8 +250,9 @@
 </div>
 <div id="faq_body" style="display: none">
     <p class="headline"><span class="text_red"></span>F.A.Q</p>
-    <div id="form">
-        <input type="text" class="place_for_search" id="myInput" value="" placeholder="Enter text..." autofocus>
+
+    <div id="form_for_search">
+        <input type="text" class="place_for_search" id="search_input" value="" placeholder="Enter text..." autofocus>
 
         <button id="button_for_turn_back" value=" " title="Cancel search" onclick="turnBack()">
            <img id="img_close" src="../accets/images/close.png">
@@ -263,7 +264,31 @@
     </div>
     <div id="faq_questions" class="faq_questions_block">
         <img class="line_question" src="../accets/faq/line_question.png">
+    </div>
+    <p class="headline"><span class="text_red">WRITE</span> US</p>
 
+    <div id="message_sent" style="display: none"></div>
+    <div id="feedback_form">
+        <form>
+            <p class="feedback_form_text">*Name:</p>
+            <span id="name_error" class="error_empty"></span>
+            <input type="text" class="feedback_user_data" name="name" autofocus>
+
+            <p class="feedback_form_text">*Email:</p>
+            <span id="email_error" class="error_empty"></span>
+            <input type="text" class="feedback_user_data" name="email" autofocus>
+
+            <p class="feedback_form_text">Subject</p>
+            <input type="text" class="feedback_user_data" autofocus>
+
+            <p class="feedback_form_text">*Your message:</p>
+            <span id="msg_error" class="error_empty"></span>
+            <textarea class="feedback_user_message" tabindex="4" name="msg"></textarea>
+
+            <button id="feedback_button" type="button" value=" " onclick="sentMessageSuccessfully(this.form)">
+                <div id="feedback_button_text">SEND</div>
+            </button>
+        </form>
     </div>
 </div>
 <div class="footer">
