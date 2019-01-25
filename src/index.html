@@ -6,20 +6,21 @@
     <link rel="stylesheet" href="../css/header.css"/>
     <link rel="stylesheet" href="../css/body.css"/>
     <script src="../scripts/index.js"></script>
+    <script src="../scripts/visualizer.js"></script>
 </head>
 <body>
 <div id="header" class="header">
 
-    <ul>
+    <ul id="menu">
         <img class="logo" src="../accets/images/logo.png">
-        <li onclick="showAnotherBody('main_body')">MAIN</li>
+        <li class="header_menu" onclick="showAnotherBody('main_body')">MAIN</li>
         <img class="red_line" src="../accets/images/red_line.png">
-        <li onclick="showAnotherBody('games_body')">GAMES</li>
+        <li class="header_menu" onclick="showAnotherBody('games_body')">GAMES</li>
         <img class="red_line" src="../accets/images/red_line.png">
-        <li onclick="showAnotherBody('faq_body')">F.A.Q</li>
+        <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
         <img class="red_line" src="../accets/images/red_line.png">
-        <img class="card" src="../accets/images/card.png">
-        <li>CARD</li>
+        <img class="card" src="../accets/images/card.png" onclick="showAnotherBody('card_body')">
+        <li class="header_menu" onclick="showAnotherBody('card_body')">CARD</li>
 
     </ul>
 </div>
@@ -33,7 +34,7 @@
         <p class="headline"><span class="text_red">BEST</span> GAMES</p>
     </div>
     <div id="best_games_section">
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/01.png">
+<!--        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/01.png">
             <div class="best_games_text">
                 <p>info</p>
                 <img src="../accets/images/red_line.png">
@@ -74,155 +75,17 @@
                 <img src="../accets/images/red_line.png">
                 <p>buy</p>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <div id="games_body" style="display: none">
     <p class="headline"><span class="text_red">ALL</span> GAMES</p>
     <div id="games_section">
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/1.png">
-            <div class="games_text">
-                <p class="games_text_headline">Dragon Age: Inquisition</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price" style="display: none">$59.99</p>
-                <p class="games_text_price_no_sale">$19.99</p>
-                <p class="games_text_discount" style="display: none">33% off</p>
-                <p class="games_text_description_no_sale">Action RPG from BioWare</p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/2.png">
-            <div class="games_text">
-                <p class="games_text_headline">Fallout 76</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$59.99</p>
-                <p class="games_text_price">$40.19</p>
-                <p class="games_text_discount">33% off</p>
-                <p class="games_text_description">Action RPG from Bethesda
-                    Game Studios</p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/3.png">
-            <div class="games_text">
-                <p class="games_text_headline">Kingdom Come: Deliverance</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$59.99</p>
-                <p class="games_text_price">$35.99</p>
-                <p class="games_text_discount">40% off</p>
-                <p class="games_text_description">Action RPG from Warhorse
-                    Studios</p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/4.png">
-            <div class="games_text">
-                <p class="games_text_headline">Minecraft</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price" style="display: none">$59.99</p>
-                <p class="games_text_price_no_sale">$29.99</p>
-                <p class="games_text_discount" style="display: none">33% off</p>
-                <p class="games_text_description_no_sale">Sandbox, survival from
-                    Mojang</p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/5.png">
-            <div class="games_text">
-                <p class="games_text_headline">Grand Theft Auto V</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$29.99</p>
-                <p class="games_text_price">$22.49</p>
-                <p class="games_text_discount">25% off</p>
-                <p class="games_text_description">Action & Adventure from
-                    Rockstar Games
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/6.png">
-            <div class="games_text">
-                <p class="games_text_headline">Diablo® III</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$19.99</p>
-                <p class="games_text_price">$9.99</p>
-                <p class="games_text_discount">50% off</p>
-                <p class="games_text_description">Action RPG from Blizzard
-                    Entertainment
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/7.png">
-            <div class="games_text">
-                <p class="games_text_headline">Destiny 2: Forsaken</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$39.99</p>
-                <p class="games_text_price">$29.99</p>
-                <p class="games_text_discount">25% off</p>
-                <p class="games_text_description">Action Shooter from Blizzard
-                    Entertainment
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/8.png">
-            <div class="games_text">
-                <p class="games_text_headline">South Park: The Fractured
-                    But Whole</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price" style="display: none">$59.99</p>
-                <p class="games_text_price_no_sale">$59.99</p>
-                <p class="games_text_discount" style="display: none">33% off</p>
-                <p class="games_text_description_no_sale">Role-playing from Ubisoft</p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/9.png">
-            <div class="games_text">
-                <p class="games_text_headline">Assassin's Creed® Origins</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$59.99</p>
-                <p class="games_text_price">$24.00</p>
-                <p class="games_text_discount">60% off</p>
-                <p class="games_text_description">Action & Adventure from
-                    Ubisoft
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/10.png">
-            <div class="games_text">
-                <p class="games_text_headline">No Man's Sky</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$49.99</p>
-                <p class="games_text_price">$44.99</p>
-                <p class="games_text_discount">10% off</p>
-                <p class="games_text_description">Action & Adventure from
-                    Hello Games
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/11.png">
-            <div class="games_text">
-                <p class="games_text_headline">The Elder Scrolls V: Skyrim</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$39.99</p>
-                <p class="games_text_price">$23.99</p>
-                <p class="games_text_discount">40% off</p>
-                <p class="games_text_description">Action RPG from Bethesda
-                    Game Studios
-                </p>
-            </div>
-        </div>
-        <div class="games_catalog"><img class="img_all_games" src="../accets/all_games_catalog/12.png">
-            <div class="games_text">
-                <p class="games_text_headline">FINAL FANTASY XV
-                    ROYAL EDITION</p>
-                <img class="price_line" src="../accets/images/red_line_price.png">
-                <p class="games_text_old_price">$49.99</p>
-                <p class="games_text_price">$29.99</p>
-                <p class="games_text_discount">40% off</p>
-                <p class="games_text_description">Role-playing from Square Enix
-                </p>
-            </div>
-        </div>
     </div>
     <p class="headline"><span class="text_red">VIDEO</span> REVIEW</p>
     <div id="video_review">
         <div class="block_video_review">
-            <iframe class="video" width="749" height="421" src="https://www.youtube.com/embed/mIAZReKCosc"
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/mIAZReKCosc"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
                     picture-in-picture" allowfullscreen></iframe>
             <div class="block_video_text">
@@ -234,7 +97,7 @@
             </div>
         </div>
         <div class="block_video_review">
-            <iframe class="video" width="749" height="421" src="https://www.youtube.com/embed/tCp21u6Fxjs"
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/tCp21u6Fxjs"
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
                     picture-in-picture" allowfullscreen></iframe>
             <div class="block_video_text">
@@ -291,9 +154,24 @@
         </form>
     </div>
 </div>
+<div id="card_body" style="display: none">
+    <div id="card_block">
+        <p class="headline_left">ORDER</p>
+        <ul class="order_inform_block">
+            <li class="order_inform">Backet</li>
+            <li class="order_inform">Billing information</li>
+            <li class="order_inform">Check order</li>
+            <li class="order_inform">Order is processed</li>
+        </ul>
+        <img class="line_question" src="../accets/faq/line_question.png">
+        <p class="text_price_left">Price including VAT</p>
+        <img class="line_question" src="../accets/faq/line_question.png">
+    </div>
+    <div id="order_block"></div>
+</div>
 <div class="footer">
     <div class="info">
-        <p>2018</p>
+        <p>2018-2019</p>
         <img src="../accets/images/white_line.png">
         <p><span class="text_red">MADE BY</span> Pr1awrence</p>
     </div>
