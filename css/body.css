@@ -139,6 +139,23 @@ div#games_section {
     text-align: center;
 }
 
+.game_image_block{
+    position: relative;
+    display: inline-block;
+}
+
+.game_image_block::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 -30px 30px 0 #2c2d37;
+    -webkit-box-shadow: inset 0 -30px 30px 0 #2c2d37;
+    -moz-box-shadow: inset 0 -30px 30px 0 #2c2d37;
+}
 .img_all_games {
     display: block;
     margin: 5px auto 0;
@@ -165,7 +182,7 @@ div#games_section {
 
 .price_line {
     float: left;
-    margin-top: 3px;
+    margin: 3px 10px 0 0;
 }
 
 .games_text_old_price {
@@ -175,14 +192,13 @@ div#games_section {
     color: #807f80;
     text-decoration: line-through;
     margin-top: 5px;
-    margin-left: 10px;
 }
 
 .games_text_price {
     display: block;
     font-family: "Roboto Medium", sans-serif;
     font-size: 27px;
-    margin: 5px 0 10px 25px;
+    margin: 5px 0 10px 0;
 }
 
 .games_text_discount {
@@ -201,7 +217,7 @@ div#games_section {
 }
 
 .games_text_new_price {
-     margin: 25px 0 25px 25px;
+     margin: 25px 0 25px 0;
      font-family: "Roboto Medium", sans-serif;
      font-size: 28px;
  }
@@ -356,16 +372,14 @@ div#faq_body {
     background-color: rgb(255, 255, 255);
     opacity: 0.9;
     margin: 0 auto 30px auto;
-    width: 1000px;
-    /*height: 1264px;*/
+    width: 50%;
     padding: 0 100px 15px 100px;
 }
 
 .line_question {
-    display: block;
     margin: 0 auto;
-    padding-top: 20px;
-    size: 100%;
+    padding-top: 10px;
+    width: 100%;
 }
 
 .question {
@@ -421,7 +435,8 @@ div#faq_body {
     padding: 10px;
     background-color: #2c2d37;
     border-radius: 10px;
-    width: 650px;
+    max-width: 550px;
+    min-width: 300px;
 }
 
 .feedback_form_text {
@@ -436,17 +451,17 @@ div#faq_body {
     display: block;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    width: 550px;
     height: 35px;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
+    width: 80%;
 }
 
 .feedback_user_message {
     display: block;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    width: 550px;
+    width: 80%;
     height: 75px;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
@@ -514,66 +529,4 @@ div#faq_body {
     padding-left: 15px;
     font-family: "Roboto", sans-serif;
     font-size: 17px;
-}
-
-div#card_body {
-    background-image: url("../accets/background/body_games.png");
-    padding-bottom: 10px;
-    position: relative;
-    min-height: 750px;
-}
-
-#card_block {
-    /*border-radius: 10px;*/
-    background-color: rgb(255, 255, 255);
-    opacity: 0.9;
-    margin: 0 auto;
-    width: 1000px;
-    /*height: 1264px;*/
-    padding: 0 100px 15px 100px;
-}
-
-.headline_left {
-    font-family: "Roboto Black", sans-serif;
-    font-size: 50px;
-    padding: 25px 0 20px 0;
-    text-align: left;
-    color: #3b393e;
-}
-
-.order_inform_block {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-}
-
-.order_inform {
-    font-size: 20px;
-    font-family: "Roboto Medium", sans-serif;
-    font-weight: 600;
-    color: rgb(44, 45, 55);
-    line-height: 1.2;
-    padding-right: 18px;
-    text-decoration: none;
-}
-
-.text_price_left {
-    text-align: right;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Roboto Medium", sans-serif;
-    color: rgb(44, 45, 55);
-    line-height: 1.2;
-    padding-top: 20px;
-}
-
-.game_order_block {
-    /*border-radius: 10px;*/
-    background-color: rgb(255, 255, 255);
-    opacity: 0.9;
-    margin: 0 auto;
-    width: 1000px;
-    /*height: 1264px;*/
-    padding: 0 100px 20px 100px;
 }

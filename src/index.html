@@ -5,8 +5,17 @@
     <title>Title</title>
     <link rel="stylesheet" href="../css/header.css"/>
     <link rel="stylesheet" href="../css/body.css"/>
-    <script src="../scripts/index.js"></script>
+    <link rel="stylesheet" href="../css/modal_window.css"/>
+    <link rel="stylesheet" href="../css/order.css"/>
     <script src="../scripts/visualizer.js"></script>
+    <script src="../scripts/models/games.js"></script>
+    <script src="../scripts/order.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/slider.js"></script>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/message_form.js"></script>
+    <script src="../scripts/models/question_and_answers.js"></script>
+
 </head>
 <body>
 <div id="header" class="header">
@@ -19,8 +28,10 @@
         <img class="red_line" src="../accets/images/red_line.png">
         <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
         <img class="red_line" src="../accets/images/red_line.png">
-        <img class="card" src="../accets/images/card.png" onclick="showAnotherBody('card_body')">
-        <li class="header_menu" onclick="showAnotherBody('card_body')">CARD</li>
+        <li id="basket" onclick="showAnotherBody('card_body')"></li>
+        <li class="header_menu" onclick="showAnotherBody('card_body')">
+            <span class="order_counter"></span>
+            CARD</li>
 
     </ul>
 </div>
@@ -34,48 +45,6 @@
         <p class="headline"><span class="text_red">BEST</span> GAMES</p>
     </div>
     <div id="best_games_section">
-<!--        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/01.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/02.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/03.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/04.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/05.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>
-        <div class="best_games_catalog"><img class="img_best_games" src="../accets/best_games_catalog/06.png">
-            <div class="best_games_text">
-                <p>info</p>
-                <img src="../accets/images/red_line.png">
-                <p>buy</p>
-            </div>
-        </div>-->
     </div>
 </div>
 <div id="games_body" style="display: none">
@@ -168,6 +137,18 @@
         <img class="line_question" src="../accets/faq/line_question.png">
     </div>
     <div id="order_block"></div>
+    <div id="order_status">
+        <div id="order_info">
+            <p class="order_total_headline">Total interim amount, including vat</p>
+            <p id="order_total_price"></p>
+        </div>
+        <p class="order_footnote">Prices and special offers for products included in the cart may change if they are not placed an order.<br>
+            Possible payment methods: We offer standard payment methods for international payments. Additional information on specific payment methods available
+            to you will be provided during the order process.</p>
+        <div class="order_checkout">
+            <button class="button_order_checkout">CONTINUE</button>
+        </div>
+    </div>
 </div>
 <div class="footer">
     <div class="info">

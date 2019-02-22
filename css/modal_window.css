@@ -1,0 +1,137 @@
+.modal_window_background {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.6s;
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+}
+
+.modal_window_game_info {
+    display: flex;
+    position: relative;
+    top: 170px;
+    background-color: white;
+    max-width: 1000px;
+    min-width: 400px;
+    height: auto;
+    margin: auto;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.6s;
+    animation-name: slideIn;
+    animation-duration: 0.6s;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 15px 10px;
+}
+
+/* The Close Button */
+.close_modal_window_game_info {
+    height: 1.5em;
+    margin: 7px;
+    float: right;
+}
+
+.close_modal_window_game_info:hover,
+.close_modal_window_game_info:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 170px; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 170px; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.img_game_modal_window_block{
+    max-width: 90%;
+    min-width: 220px;
+    margin: 0 auto;
+}
+
+.img_game_modal_window{
+    max-width: 90%;
+    height: auto;
+}
+
+.game_modal_window_text{
+    margin-left: 20px;
+    width: 590px;
+    min-width: 258px;
+}
+
+.headline_modal_window_game_info{
+    font-size: 22px;
+    font-family: "Roboto Medium", sans-serif;
+}
+
+.modal_games_text_description{
+    font-family: "Roboto", sans-serif;
+    margin: 10px 20px 20px 0;
+}
+
+.game_modal_window_price_block{
+    margin-left: 15px;
+    position: relative;
+}
+
+.modal_window_games_text_discount{
+    display: inline-block;
+    margin-left: 15px;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 27px;
+    color: red;
+}
+
+.game_buttons_modal_window{
+    display: block;
+    margin-top: 20px;
+}
+
+.games_button_buy_now, .games_button_add_card{
+    display: inline-block;
+    margin: 8px;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    padding: 7px 24px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+.games_button_buy_now:hover, .games_button_add_card:hover {
+    border: 2px solid red;
+    color: red;
+}
+
+.games_button_buy_now {
+    padding: 7px 40px;
+}

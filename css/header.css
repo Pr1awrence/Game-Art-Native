@@ -31,9 +31,25 @@ body, p {
     padding-top: 30px;
 }
 
-.card {
+#basket {
+    background-image: url("../accets/images/card.png");
+    position: relative;
     margin-top: 20px;
     height: 62px;
     width: 77px;
+}
 
+.game_counter{
+    display: block;
+    position: absolute;
+    right: 2px;
+    border-radius: 9px;
+    background-color: #e9b606;
+    color: black;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 }
