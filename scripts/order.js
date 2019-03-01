@@ -26,6 +26,7 @@ Order.deleteGame = function(game) {
     }
     Order.amount -= game.newPrice;
     Visualizer.changeAmount();
+    Visualizer.displayButtonOrderCheckout();
 };
 
 Order.priceCalculation = function () {

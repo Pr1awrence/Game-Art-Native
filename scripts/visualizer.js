@@ -44,15 +44,13 @@ Visualizer.createTwoButtonModalWindow = function(game){
     return createDivGamesButtons;
 };
 
-Visualizer.renderGameInfo = function (game) {
-    //тут будет происходить вызов окна, который нарисует информацию
+Visualizer.renderGameModalWindow = function (game) {
     let modalWindowBackground = Visualizer.createElement('div', 'modal_window_background');
     modalWindowBackground.id = 'modal_window_background';
     let modalWindowForGameInfo = Visualizer.createElement('div', 'modal_window_game_info');
     let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_game_info', null, "../accets/images/close.png");
     modalButtonForClose.onclick = function () {
-        modalWindowBackground.style.display = "none";
-        document.body.removeChild(document.body.children[document.body.children.length - 1]);
+        document.getElementById("modal_window_background").remove();
         document.body.style.overflow = "auto";
     };
     let modalGameImageBlock = Visualizer.createElement('div', 'img_game_modal_window_block');
@@ -89,7 +87,7 @@ Visualizer.renderGameInfo = function (game) {
 
     window.onclick = function(event) {
         if (event.target === modalWindowBackground) {
-            modalWindowBackground.style.display = "none";
+            document.getElementById("modal_window_background").remove();
             /*document.body.style.overflow = "auto";*/
         }
     };
@@ -145,10 +143,11 @@ Visualizer.renderQuestAndAnswFAQ = function (questionsAndAnswers) {
     }
 };
 
-//метод для визуализации игр на странице Games
-//ПРИКРЕПЛЯТЬ БУДЕМ К ID id="games_section"
 Visualizer.renderGamesOnGames = function (games) {
-    let redLineSrc = "../accets/images/red_line_price.png";
+    let elemGames = document.getElementById('games_section');
+    while (elemGames.firstChild) {
+        elemGames.firstChild.remove();
+    }
     for (let i = 0; i < games.length; i++) {
 
         let rootElementWithImage = createCore(games[i]);//должна вернуть div с прикрепленной картинкой
@@ -174,7 +173,7 @@ Visualizer.renderGamesOnGames = function (games) {
         function createTextPanel(game) {
             let divGamesText = Visualizer.createElement('div', 'games_text');
             let gameHeadline = Visualizer.createElement('p', 'games_text_headline', game.name);
-            let priceLine = Visualizer.createElement('img', 'price_line', null, redLineSrc);
+            let priceLine = Visualizer.createElement('p', 'price_line');
             let gameDescription = Visualizer.createElement('p', 'games_text_description_no_sale', game.shortDescription);
             let gameNewPrice = Visualizer.createElement('p', 'games_text_new_price', "$" + game.newPrice);
 
@@ -196,6 +195,23 @@ Visualizer.renderGamesOnGames = function (games) {
             return divGamesText;
         }
     }
+};
+
+Visualizer.renderGamesOnGamesByGenre = function(genre){
+    let elemGames = document.getElementById('games_section');
+    while (elemGames.firstChild) {
+        elemGames.firstChild.remove();
+    }
+    let gamesByGenre = games.filter(game => {
+        for(let i = 0; i < game.genre.length; i++){
+            if(game.genre[i] === genre){
+                return game;
+            }
+        }
+    });
+
+
+    Visualizer.renderGamesOnGames(gamesByGenre);
 };
 
 Visualizer.renderGameOnOrder = function(game){
@@ -246,6 +262,7 @@ Visualizer.renderOrdersPage = function(game) {
         Visualizer.renderGameOnOrder(game);
         Visualizer.addCountToCard();
         Visualizer.changeAmount();
+        Visualizer.displayButtonOrderCheckout();
     }
 };
 
@@ -266,4 +283,53 @@ Visualizer.addCountToCard = function() {
 Visualizer.changeAmount = function() {
     Order.priceCalculation();
     document.getElementById("order_total_price").innerHTML = "$" + Math.ceil(Order.amount * 100)/100;
+};
+
+Visualizer.displayButtonOrderCheckout = function () {
+    let button = document.getElementById('button_order_checkout');
+    if(Order.gamesArray.length === 1){
+        button.style.display = '';
+        button.onclick = Visualizer.buttonOrderCheckoutModalWindow;
+    } else if (Order.gamesArray.length === 0){
+        button.style.display = 'none';
+    }
+};
+
+Visualizer.buttonOrderCheckoutModalWindow = function () {
+    let modalWindowBackground = Visualizer.createElement('div', 'modal_window_background');
+    modalWindowBackground.id = 'modal_window_background';
+    let modalWindowForOrderStatus = Visualizer.createElement('div', 'modal_window_order_info');
+    let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_order_info', null, "../accets/images/close.png");
+    modalButtonForClose.onclick = function () {
+        modalWindowBackground.style.display = "none";
+        document.body.removeChild(document.body.children[document.body.children.length - 1]);
+        document.body.style.overflow = "auto";
+    };
+    let modalOrderStatusText = Visualizer.createElement('div', 'order_modal_window_text');
+    modalOrderStatusText.innerHTML = 'Thank you for the order!' + '<br>' + 'Your order No. ___ is accepted for processing.';
+
+    modalWindowForOrderStatus.appendChild(modalOrderStatusText);
+    modalWindowForOrderStatus.appendChild(modalButtonForClose);
+    modalWindowBackground.appendChild(modalWindowForOrderStatus);
+
+    window.onclick = function(event) {
+        if (event.target === modalWindowBackground) {
+            document.getElementById("modal_window_background").remove();
+        }
+    };
+
+    document.body.appendChild(modalWindowBackground);
+    modalWindowBackground.style.display = "block";
+
+    //delete of the current order
+    Visualizer.deleteAllGames();
+};
+
+Visualizer.deleteAllGames = function () {
+    Order.gamesArray = [];
+    Order.removeElementById('order_block');
+    Order.count = 0;
+    document.getElementById("game_counter").style.display = "none";
+    Visualizer.changeAmount();
+    Visualizer.displayButtonOrderCheckout();
 };

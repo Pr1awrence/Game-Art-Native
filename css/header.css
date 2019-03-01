@@ -1,40 +1,82 @@
-.header {
-    background-image: url("../accets/images/header_background_01.png");
-}
-.logo {
-    margin-left: 90px;
-    margin-right: 300px;
-    margin-top: 5px;
-}
-
-.red_line {
-    margin-left: 50px;
-    margin-right: 50px;
-
-}
 body, p {
     margin: 0;
 }
 
-#menu {
-    margin-top: 0;
-    margin-bottom: 0;
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    background-image: url("../accets/images/header_background_01.jpg");
+}
+
+.red_line_menu{
+    width: 5px;
+    height: 50px;
+    background: red;
+    margin: 0 10px;
+}
+
+.header .menu ul{
     display: flex;
     list-style: none;
-    font-size: 30px;
+    align-items: center;
+    font-size: 26px;
     font-family: Roboto, Arial, sans-serif;
     color: white;
+    padding-left: 0;
 }
+
+.header .menu ul li {
+    margin: 0 20px;
+}
+
+.header .menu ul li:last-child {
+    margin-left: -15px;
+}
+
+@media screen and (max-width: 990px) {
+    .header {
+        align-items: left;
+        background-image: url("../accets/images/header_background_02_900_214.jpg");
+    }
+    .logo {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header  {
+        flex-direction: column;
+    }
+    .header .menu ul {
+        flex-direction: column;
+        align-self: center;
+    }
+    .header .menu ul li {
+        font-size: 28px;
+        margin: 5px;
+    }
+    .header .menu ul li:last-child {
+        margin-left: 0;
+    }
+    .red_line_menu,#basket {
+        display: none;
+    }
+    .menu {
+        margin-top: -40px;
+    }
+}
+
 
 .header_menu {
     cursor: pointer;
-    padding-top: 30px;
 }
 
 #basket {
     background-image: url("../accets/images/card.png");
     position: relative;
-    margin-top: 20px;
     height: 62px;
     width: 77px;
 }

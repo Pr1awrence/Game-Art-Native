@@ -15,7 +15,7 @@
     animation-duration: 0.6s;
 }
 
-.modal_window_game_info {
+.modal_window_game_info, .modal_window_order_info {
     display: flex;
     position: relative;
     top: 170px;
@@ -34,14 +34,13 @@
 }
 
 /* The Close Button */
-.close_modal_window_game_info {
+.close_modal_window_game_info, .close_modal_window_order_info {
     height: 1.5em;
     margin: 7px;
-    float: right;
 }
 
-.close_modal_window_game_info:hover,
-.close_modal_window_game_info:focus {
+.close_modal_window_game_info, .close_modal_window_order_info:hover,
+.close_modal_window_game_info, .close_modal_window_order_info:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -134,4 +133,24 @@
 
 .games_button_buy_now {
     padding: 7px 40px;
+}
+
+.modal_window_order_info {
+    position: relative;
+    height: auto;
+    padding: 60px 20px;
+}
+
+.order_modal_window_text {
+    margin: auto;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+.close_modal_window_order_info {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }

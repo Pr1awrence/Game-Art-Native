@@ -10,28 +10,25 @@ window.onload = function () {
     Visualizer.renderGamesOnGames(games);
 };
 
+function faqSearch() {
+    let input = document.getElementById("search_input");
+    let regex = new RegExp('\\b' + input.value, 'i');
 
-//функция для search
-//TODO: переделать блок с использованием регэксп
-function myFunction() {
-    let input, filter, div, div2;
-    input = document.getElementById("search_input");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("faq_questions");
-    div2 = div.getElementsByTagName("div");
+    let mainDiv = document.getElementById("faq_questions");
+    let innerDiv = mainDiv.getElementsByTagName("div");
 
-    for (let j = 0; j < div2.length; j++) {
-        let question = div2[j].getElementsByTagName("h2")[0].innerHTML;
-        let answer = div2[j].getElementsByTagName("p")[0].innerHTML;
-        if (question.toUpperCase().indexOf(filter) > -1 ||
-            answer.toUpperCase().indexOf(filter) > -1) {
-            div2[j].style.display = "";
+    for(let i = 0; i < innerDiv.length; i++){
+        let question = innerDiv[i].getElementsByTagName("h2")[0].innerHTML;
+        let answer = innerDiv[i].getElementsByTagName("p")[0].innerHTML;
+        if(question.match(regex) !== null || answer.match(regex) !== null){
+            innerDiv[i].style.display = "";
         } else {
-            div2[j].style.display = "none";
+            innerDiv[i].style.display = "none";
         }
     }
 }
+
 function turnBack() {
     document.getElementById("search_input").value = '';
-    myFunction();
+    faqSearch();
 }

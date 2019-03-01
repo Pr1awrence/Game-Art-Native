@@ -19,26 +19,31 @@
 </head>
 <body>
 <div id="header" class="header">
-
-    <ul id="menu">
-        <img class="logo" src="../accets/images/logo.png">
-        <li class="header_menu" onclick="showAnotherBody('main_body')">MAIN</li>
-        <img class="red_line" src="../accets/images/red_line.png">
-        <li class="header_menu" onclick="showAnotherBody('games_body')">GAMES</li>
-        <img class="red_line" src="../accets/images/red_line.png">
-        <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
-        <img class="red_line" src="../accets/images/red_line.png">
-        <li id="basket" onclick="showAnotherBody('card_body')"></li>
-        <li class="header_menu" onclick="showAnotherBody('card_body')">
-            <span class="order_counter"></span>
-            CARD</li>
-
-    </ul>
+    <div class="logo">
+        <img src="../accets/images/logo.png" onclick="showAnotherBody('main_body')">
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="header_menu" onclick="showAnotherBody('main_body')">MAIN</li>
+            <li class="red_line_menu"></li>
+            <li class="header_menu" onclick="showAnotherBody('games_body')">GAMES</li>
+            <li class="red_line_menu"></li>
+            <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
+            <li class="red_line_menu"></li>
+            <li id="basket" onclick="showAnotherBody('card_body')"></li>
+            <li class="header_menu" onclick="showAnotherBody('card_body')">
+                <span class="order_counter"></span>
+                CARD
+            </li>
+        </ul>
+    </nav>
 </div>
 <div id="main_body">
     <div id="slide">
         <div class="left" onclick="slider.left();"></div>
-        <div id="slider"></div>
+        <div id="slider">
+            <figure id="slider_image"></figure>
+        </div>
         <div class="right" onclick="slider.right();"></div>
     </div>
     <div id="topics">
@@ -49,6 +54,22 @@
 </div>
 <div id="games_body" style="display: none">
     <p class="headline"><span class="text_red">ALL</span> GAMES</p>
+    <div id="buttons_games_genre">
+        <button class="buttons_genre" id="all_games_genre"
+                onclick="Visualizer.renderGamesOnGames(games)">ALL</button>
+        <button class="buttons_genre" id="rpg_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('RPG')">RPG</button>
+        <button class="buttons_genre" id="sandbox_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('Sandbox')">SANDBOX</button>
+        <button class="buttons_genre" id="survival_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('Survival')">SURVIVAL</button>
+        <button class="buttons_genre" id="action_adventure_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('Action & Adventure')">ACTION & ADVENTURE</button>
+        <button class="buttons_genre" id="shooter_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('Shooter')">SHOOTER</button>
+        <button class="buttons_genre" id="role_playing_genre"
+                onclick="Visualizer.renderGamesOnGamesByGenre('Role-playing')">ROLE-PLAYING</button>
+    </div>
     <div id="games_section">
     </div>
     <p class="headline"><span class="text_red">VIDEO</span> REVIEW</p>
@@ -87,10 +108,10 @@
         <input type="text" class="place_for_search" id="search_input" value="" placeholder="Enter text..." autofocus>
 
         <button id="button_for_turn_back" value=" " title="Cancel search" onclick="turnBack()">
-           <img id="img_close" src="../accets/images/close.png">
+            <img id="img_close" src="../accets/images/close.png">
         </button>
 
-        <button id="button_search" type="submit" value=" " onclick="myFunction()">
+        <button id="button_search" type="submit" value=" " onclick="faqSearch()">
             <div id="button_search_items"><img id="img_search" src="../accets/faq/search.png">Search</div>
         </button>
     </div>
@@ -142,22 +163,22 @@
             <p class="order_total_headline">Total interim amount, including vat</p>
             <p id="order_total_price"></p>
         </div>
-        <p class="order_footnote">Prices and special offers for products included in the cart may change if they are not placed an order.<br>
-            Possible payment methods: We offer standard payment methods for international payments. Additional information on specific payment methods available
+        <p class="order_footnote">Prices and special offers for products included in the cart may change if they are not
+            placed an order.<br>
+            Possible payment methods: We offer standard payment methods for international payments. Additional
+            information on specific payment methods available
             to you will be provided during the order process.</p>
         <div class="order_checkout">
-            <button class="button_order_checkout">CONTINUE</button>
+            <button id="button_order_checkout" style="display: none">CONTINUE</button>
         </div>
     </div>
 </div>
 <div class="footer">
     <div class="info">
         <p>2018-2019</p>
-        <img src="../accets/images/white_line.png">
+        <p class="footer_line">
         <p><span class="text_red">MADE BY</span> Pr1awrence</p>
     </div>
 </div>
-
-
 </body>
 </html>

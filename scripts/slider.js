@@ -6,7 +6,7 @@ let slider = {
     intervalHandler: null,
 
     set: function (image) {
-        document.getElementById("slider").style.backgroundImage = 'url(' + image + ')';
+        document.getElementById("slider_image").style.backgroundImage = 'url(' + image + ')';
     },
     init: function () {
         this.set(this.slides[this.frame]);
