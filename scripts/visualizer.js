@@ -306,7 +306,9 @@ Visualizer.buttonOrderCheckoutModalWindow = function () {
         document.body.style.overflow = "auto";
     };
     let modalOrderStatusText = Visualizer.createElement('div', 'order_modal_window_text');
-    modalOrderStatusText.innerHTML = 'Thank you for the order!' + '<br>' + 'Your order No. ___ is accepted for processing.';
+    //creates a random order number
+    modalOrderStatusText.innerHTML = 'Thank you for the order!' + '<br>' + 'Your order No.' +
+        (Math.floor(Math.random() * (10000 - 1)) + 1) + ' is accepted for processing.';
 
     modalWindowForOrderStatus.appendChild(modalOrderStatusText);
     modalWindowForOrderStatus.appendChild(modalButtonForClose);

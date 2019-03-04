@@ -1,16 +1,16 @@
 div#card_body {
-    background-image: url("../accets/background/body_games.png");
+    background-image: url("../accets/background/body_games.jpg");
     padding-bottom: 10px;
     position: relative;
     min-height: 750px;
 }
 
 #card_block, #order_block {
-    /*border-radius: 10px;*/
     background-color: rgb(255, 255, 255);
     opacity: 0.9;
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
+    min-width: 500px;
     padding: 0 100px 0 100px;
 }
 
@@ -53,8 +53,8 @@ div#card_body {
     background-color: rgb(255, 255, 255);
     opacity: 0.9;
     margin: 0 auto;
-    width: 1000px;
-    /*height: 1264px;*/
+    max-width: 1000px;
+    min-width: 500px;
     padding: 0 100px 20px 100px;
 }
 
@@ -120,7 +120,8 @@ div#card_body {
     background-color: rgb(255, 255, 255);
     opacity: 0.9;
     margin: 0 auto 30px auto;
-    width: 1000px;
+    max-width: 1000px;
+    min-width: 500px;
     padding: 0 100px 20px 100px;
 }
 
@@ -139,6 +140,42 @@ div#card_body {
 
 .order_total_headline {
     margin-right: 50px;
+}
+
+@media screen and (max-width: 990px) {
+    .order_game_info {
+        flex-flow: wrap;
+    }
+    .order_game_image_block {
+        max-width: 30%;
+        order: 0;
+    }
+    .game_modal_window_price_block {
+        order: 1;
+    }
+    .order_game_text {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #order_info {
+        text-align: left;
+        margin: 0;
+    }
+    .order_total_headline {
+        margin-right: 10px;
+    }
+    .order_game_text{
+        min-width: 400px;
+        font-size: 22px;
+    }
+    .order_game_text_description {
+
+    }
+    .order_footnote {
+        font-size: 14px;
+    }
 }
 
 .order_footnote {

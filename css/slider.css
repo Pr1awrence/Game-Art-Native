@@ -1,0 +1,73 @@
+#slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+#main_body {
+    background-image: url("../accets/background/back slider.png");
+}
+
+.left {
+    background-image: url("../accets/slider/arrow_left.png");
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    align-self: center;
+    margin: 0 30px;
+}
+
+.right {
+    background-image: url("../accets/slider/arrow_right.png");
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    align-self: center;
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 1370px) {
+    #slide {
+        flex-flow: wrap;
+    }
+    .left {
+        background-image: url("../accets/slider/arrow_left_white.png");
+        order: 1;
+        margin-bottom: 30px;
+    }
+    #slider {
+        margin: -30px 70px;
+        order: 0;
+    }
+    .right {
+        background-image: url("../accets/slider/arrow_right_white.png");
+        order: 2;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #slider {
+        margin: -30px 15px;
+        order: 0;
+    }
+}
+
+#slider {
+    width: 1070px;
+    height: auto;
+}
+
+#slider_image {
+    padding-top: 56.41%;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 15px;
+    transition: all 0.5s ease-out;
+    margin: 60px 0;
+}

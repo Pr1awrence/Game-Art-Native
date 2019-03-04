@@ -1,0 +1,174 @@
+div#games_body {
+    background-image: url("../accets/background/body_games.jpg");
+    padding: 10px 0;
+    position: relative;
+}
+
+div#games_section {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons_games_genre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons_genre {
+    display: inline-block;
+    min-width: 150px;
+    max-width: 350px;
+    margin: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: #2c2d37;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #2c2d37;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+
+.buttons_genre:hover, .buttons_genre:focus, .buttons_genre:focus:hover {
+    background-color: #e9b606;
+    color: black;
+}
+
+.games_catalog {
+    position: relative;
+    width: 360px;
+    height: 600px;
+    background-color: #2c2d37;
+    margin: 20px 5px;
+    text-align: center;
+}
+
+.game_image_block{
+    position: relative;
+    display: inline-block;
+}
+
+.game_image_block::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 -30px 30px 0 #2c2d37;
+    -webkit-box-shadow: inset 0 -30px 30px 0 #2c2d37;
+    -moz-box-shadow: inset 0 -30px 30px 0 #2c2d37;
+}
+
+.img_all_games {
+    display: block;
+    margin: 5px;
+}
+
+.games_text {
+    position: absolute;
+    bottom: 75px;
+    left: 15px;
+    display: inline-block;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: left;
+    width: 310px;
+    padding: 0 10px 5px 10px;
+}
+
+.games_text_headline {
+    font-size: 25px;
+    font-family: "Roboto Medium", sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.price_line {
+    float: left;
+    margin: 3px 10px 0 0;
+    width: 5px;
+    height: 70px;
+    background: red;
+}
+
+.games_text_old_price {
+    display: inline-block;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 27px;
+    color: #807f80;
+    text-decoration: line-through;
+    margin-top: 3px;
+}
+
+.games_text_price {
+    display: block;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 27px;
+    margin: 5px 0 10px 0;
+}
+
+.games_text_discount {
+    display: inline-block;
+    margin-left: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 27px;
+    color: #c99d11;
+}
+
+.games_text_description {
+    display: block;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    color: #807f80;
+}
+
+.games_text_new_price {
+    margin: 25px 0 25px 0;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 28px;
+}
+
+.games_text_description_no_sale {
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    color: #807f80;
+}
+
+.games_buttons {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.games_button_info, .games_button_buy{
+    display: inline-block;
+    margin: 8px;
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    padding: 7px 30px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+.games_button_info:hover, .games_button_buy:hover {
+    border: 2px solid #e9b606;
+    color: #e9b606;
+}
+
+.games_button_buy {
+    padding: 7px 33px;
+}
