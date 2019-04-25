@@ -1,6 +1,6 @@
 let slider = {
-    slides: ['../accets/slider/1.jpg', '../accets/slider/2.jpg',
-        '../accets/slider/3.jpg', '../accets/slider/4.jpg'],
+    slides: ['../assets/slider/1.jpg', '../assets/slider/2.jpg',
+        '../assets/slider/3.jpg', '../assets/slider/4.jpg'],
     frame: 0,
 
     intervalHandler: null,

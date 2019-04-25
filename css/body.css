@@ -1,5 +1,9 @@
+h1 {
+    margin: 0;
+}
+
 #topics {
-    background-image: url("../accets/images/header_background_01.jpg");
+    background-image: url("../assets/images/header_background_01.jpg");
 }
 
 .headline {
@@ -18,7 +22,7 @@
 
 /*Footer*/
 .footer {
-    background-image: url("../accets/images/header_background_01.jpg");
+    background-image: url("../assets/images/header_background_01.jpg");
 }
 
 .footer_info {

@@ -1,5 +1,5 @@
 div#card_body {
-    background-image: url("../accets/background/body_games.jpg");
+    background-image: url("../assets/background/body_games.jpg");
     padding-bottom: 10px;
     position: relative;
     min-height: 750px;
@@ -143,6 +143,13 @@ div#card_body {
 }
 
 @media screen and (max-width: 990px) {
+    div.order_checkout {
+        text-align: center;
+    }
+    button#button_order_checkout {
+        font-size: 35px;
+        margin: 15px;
+    }
     .order_game_info {
         flex-flow: wrap;
     }
@@ -155,6 +162,29 @@ div#card_body {
     }
     .order_game_text {
         order: 2;
+        max-width: initial;
+        font-size: 22px;
+    }
+    .games_text_old_price, .modal_window_games_text_discount, .games_text_price, .order_headline_game_info {
+        font-size: 40px;
+    }
+    .games_button_delete {
+        position: initial;
+        float: initial;
+        margin: 5px 0 15px 0;
+        font-size: 27px;
+    }
+    .modal_window_games_text_discount{
+        display: block;
+        margin-left: 0;
+    }
+    .order_total_headline, #order_total_price {
+        display: block;
+        font-size: 15px;
+    }
+    #order_info{
+        text-align: left;
+        margin-right: 0;
     }
 }
 
@@ -162,24 +192,17 @@ div#card_body {
     #order_info {
         text-align: left;
         margin: 0;
+        font-size: 38px;
     }
     .order_total_headline {
         margin-right: 10px;
     }
-    .order_game_text{
-        min-width: 400px;
-        font-size: 22px;
-    }
-    .order_game_text_description {
-
-    }
-    .order_footnote {
-        font-size: 14px;
+    .games_text_old_price, .modal_window_games_text_discount, .games_text_price {
+        font-size: 45px;
     }
 }
 
 .order_footnote {
-    font-size: 16px;
     font-family: "Roboto", sans-serif;;
     color: rgb(44, 45, 55);
     line-height: 1.2;

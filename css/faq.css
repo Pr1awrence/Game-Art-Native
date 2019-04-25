@@ -1,5 +1,5 @@
 div#faq_body {
-    background-image: url("../accets/background/body_games.jpg");
+    background-image: url("../assets/background/body_games.jpg");
     padding: 10px 0;
     position: relative;
     min-height: 750px;
@@ -43,13 +43,23 @@ div#faq_body {
     font-family: "Roboto Medium", sans-serif;
 }
 
-#button_for_turn_back img{
+button#button_for_turn_back {
     position: absolute;
     left: 495px;
+    top: 18px;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#button_for_turn_back img {
+    left: 0;
     width: 25px;
     height: 25px;
     margin: auto 0;
-    top: 18px;
 }
 
 #button_search_items {

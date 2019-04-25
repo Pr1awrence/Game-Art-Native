@@ -13,7 +13,7 @@ function sentMessageSuccessfully(form) {
 
         createH1SuccessForm.innerHTML = "Your message has been sent successfully!";
         createH2SuccessForm.innerHTML = "Expect a response from the support service to the email you specified.";
-        createImgSuccessForm.src = "../accets/images/successful_message.png";
+        createImgSuccessForm.src = "../assets/images/successful_message.png";
 
         createDivSuccessForm.appendChild(createImgSuccessForm);
         createDivSuccessForm.appendChild(createH1SuccessForm);
@@ -31,7 +31,7 @@ function validate(form) {
     if (form.name.value.length === 0) {
         error = true;
         showError('name_error', 'Name can\'t be empty');
-    } else if (form.name.value.match("/^[a-zA-Z'][a-zA-Z-' ]+[a-zA-Z']?$/") === null) {
+    } else if (form.name.value.match("^[a-zA-Z'][a-zA-Z-' ]+[a-zA-Z']?$") === null) {
         error = true;
         showError('name_error', 'Name must be greater than 1 digit and not have characters \ /: *? "<> |');
     }

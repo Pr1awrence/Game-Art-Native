@@ -48,7 +48,7 @@ Visualizer.renderGameModalWindow = function (game) {
     let modalWindowBackground = Visualizer.createElement('div', 'modal_window_background');
     modalWindowBackground.id = 'modal_window_background';
     let modalWindowForGameInfo = Visualizer.createElement('div', 'modal_window_game_info');
-    let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_game_info', null, "../accets/images/close.png");
+    let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_game_info', null, "../assets/images/close.png");
     modalButtonForClose.onclick = function () {
         document.getElementById("modal_window_background").remove();
         document.body.style.overflow = "auto";
@@ -102,8 +102,8 @@ Visualizer.renderGameModalWindow = function (game) {
 Visualizer.renderGamesOnMain = function (games){
     games.forEach(function (game) {
         if(game.bestgame){
-            let rootElementWithImage = createCore(game);//должна вернуть div с прикрепленной картинкой
-            let buttonBlock = Visualizer.createTwoButtonGame(game);//сделать 2 кнопки купить и инфо
+            let rootElementWithImage = createCore(game);
+            let buttonBlock = Visualizer.createTwoButtonGame(game);
 
             rootElementWithImage.appendChild(buttonBlock);
             document.getElementById('best_games_section').appendChild(rootElementWithImage);
@@ -133,7 +133,7 @@ Visualizer.renderQuestAndAnswFAQ = function (questionsAndAnswers) {
 
         headerQuestion.innerHTML = questionsAndAnswers[i].question;
         answerBlock.innerHTML = questionsAndAnswers[i].answer;
-        lineImageForQuestAndAnsw.src = "../accets/faq/line_question.png";
+        lineImageForQuestAndAnsw.src = "../assets/faq/line_question.png";
 
         divBlockForQuestAndAnsw.appendChild(headerQuestion);
         divBlockForQuestAndAnsw.appendChild(answerBlock);
@@ -221,7 +221,7 @@ Visualizer.renderGameOnOrder = function(game){
     let orderGameText = Visualizer.createElement('div', 'order_game_text');
     let orderGameHeadline = Visualizer.createElement('h2', 'order_headline_game_info', game.name);
     let orderGameDescription = Visualizer.createElement('p', 'order_game_text_description', game.longDescription);
-    let orderLine = Visualizer.createElement('img', 'line_question', null, "../accets/faq/line_question.png");
+    let orderLine = Visualizer.createElement('img', 'line_question', null, "../assets/faq/line_question.png");
 
     let buttonDelete = Visualizer.createElement('button', 'games_button_delete', 'DELETE');
     buttonDelete.addEventListener("click", function(){
@@ -261,7 +261,7 @@ Visualizer.renderOrdersPage = function(game) {
         Order.gamesArray.push(game);
         Visualizer.renderGameOnOrder(game);
         Visualizer.addCountToCard();
-        Visualizer.changeAmount();
+        Visualizer.currentAmount();
         Visualizer.displayButtonOrderCheckout();
     }
 };
@@ -280,7 +280,7 @@ Visualizer.addCountToCard = function() {
     }
 };
 
-Visualizer.changeAmount = function() {
+Visualizer.currentAmount = function() {
     Order.priceCalculation();
     document.getElementById("order_total_price").innerHTML = "$" + Math.ceil(Order.amount * 100)/100;
 };
@@ -299,7 +299,7 @@ Visualizer.buttonOrderCheckoutModalWindow = function () {
     let modalWindowBackground = Visualizer.createElement('div', 'modal_window_background');
     modalWindowBackground.id = 'modal_window_background';
     let modalWindowForOrderStatus = Visualizer.createElement('div', 'modal_window_order_info');
-    let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_order_info', null, "../accets/images/close.png");
+    let modalButtonForClose = Visualizer.createElement('img', 'close_modal_window_order_info', null, "../assets/images/close.png");
     modalButtonForClose.onclick = function () {
         modalWindowBackground.style.display = "none";
         document.body.removeChild(document.body.children[document.body.children.length - 1]);
@@ -332,6 +332,6 @@ Visualizer.deleteAllGames = function () {
     Order.removeElementById('order_block');
     Order.count = 0;
     document.getElementById("game_counter").style.display = "none";
-    Visualizer.changeAmount();
+    Visualizer.currentAmount();
     Visualizer.displayButtonOrderCheckout();
 };

@@ -5,7 +5,6 @@ window.onload = function () {
         slider.autoRight();
     }, 5000);
     addQuestions();
-    //TODO: ПЕРЕДЕЛАТЬ БЛОК НИЖЕ - ДОЛЖНЫ ЗАПУСКАТЬСЯ С КЛИКА НА СТРАНИЦУ
     Visualizer.renderGamesOnMain(games);
     Visualizer.renderGamesOnGames(games);
 };

@@ -1,4 +1,3 @@
-//конструктор Ордер, который пока должен обладать 5 полями
 function Order() {}
 
 Order.gamesArray = [];
@@ -25,7 +24,7 @@ Order.deleteGame = function(game) {
         document.getElementById("game_counter").style.display = "none";
     }
     Order.amount -= game.newPrice;
-    Visualizer.changeAmount();
+    Visualizer.currentAmount();
     Visualizer.displayButtonOrderCheckout();
 };
 

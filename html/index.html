@@ -18,32 +18,32 @@
     <script src="../scripts/order.js"></script>
     <script src="../scripts/index.js"></script>
     <script src="../scripts/slider.js"></script>
-    <script src="../scripts/menu.js"></script>
-    <script src="../scripts/message_form.js"></script>
+    <script src="../scripts/models/menu.js"></script>
+    <script src="../scripts/feedback_form.js"></script>
     <script src="../scripts/models/question_and_answers.js"></script>
 
 </head>
 <body>
-<div id="header" class="header">
-    <div class="logo">
-        <img src="../accets/images/logo.png" onclick="showAnotherBody('main_body')">
+<header>
+    <div id="header" class="header">
+        <div class="logo">
+            <img src="../assets/images/logo.png" onclick="showAnotherBody('main_body')">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="header_menu" onclick="showAnotherBody('main_body')">MAIN</li>
+                <li class="red_line_menu"></li>
+                <li class="header_menu" onclick="showAnotherBody('games_body')">GAMES</li>
+                <li class="red_line_menu"></li>
+                <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
+                <li class="red_line_menu"></li>
+                <li id="basket" onclick="showAnotherBody('card_body')"></li>
+                <li class="header_menu" onclick="showAnotherBody('card_body')">CARD</li>
+            </ul>
+        </nav>
     </div>
-    <nav class="menu">
-        <ul>
-            <li class="header_menu" onclick="showAnotherBody('main_body')">MAIN</li>
-            <li class="red_line_menu"></li>
-            <li class="header_menu" onclick="showAnotherBody('games_body')">GAMES</li>
-            <li class="red_line_menu"></li>
-            <li class="header_menu" onclick="showAnotherBody('faq_body')">F.A.Q</li>
-            <li class="red_line_menu"></li>
-            <li id="basket" onclick="showAnotherBody('card_body')"></li>
-            <li class="header_menu" onclick="showAnotherBody('card_body')">
-                <span class="order_counter"></span>
-                CARD
-            </li>
-        </ul>
-    </nav>
-</div>
+</header>
+<main>
 <div id="main_body">
     <div id="slide">
         <div class="left" onclick="slider.left();"></div>
@@ -52,14 +52,17 @@
         </div>
         <div class="right" onclick="slider.right();"></div>
     </div>
+    <section>
     <div id="topics">
-        <p class="headline"><span class="text_red">BEST</span> GAMES</p>
+        <h1 class="headline"><span class="text_red">BEST</span> GAMES</h1>
     </div>
     <div id="best_games_section">
     </div>
+    </section>
 </div>
 <div id="games_body" style="display: none">
-    <p class="headline"><span class="text_red">ALL</span> GAMES</p>
+    <section>
+    <h1 class="headline"><span class="text_red">ALL</span> GAMES</h1>
     <div id="buttons_games_genre">
         <button class="buttons_genre" id="all_games_genre"
                 onclick="Visualizer.renderGamesOnGames(games)">ALL</button>
@@ -78,14 +81,17 @@
     </div>
     <div id="games_section">
     </div>
-    <p class="headline"><span class="text_red">VIDEO</span> REVIEW</p>
+    </section>
+
+    <section>
+    <h1 class="headline"><span class="text_red">VIDEO</span> REVIEW</h1>
     <div id="video_review">
         <div class="block_video_review">
             <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/mIAZReKCosc"
                     frameborder="0" allowfullscreen></iframe>
             <div class="block_video_text">
                 <p class="headline_video"><span class="text_yellow">Fallout 76</span> Review</p>
-                <img class="video_description_line" src="../accets/images/red_line_gorizont.png">
+                <img class="video_description_line" src="../assets/images/red_line_gorizont.png">
                 <p class="video_description">Fallout 76 Reviewed by Brandin Tyrrel
                     on PC, Xbox One X, and PlayStation 4 Pro.
                     Fallout 76: Review In Progress Update 2 ...</p>
@@ -97,69 +103,78 @@
             <div class="block_video_text">
                 <p class="headline_video"><span class="text_yellow">Dragon Age: Inquisition
                 </span> Review</p>
-                <img class="video_description_line" src="../accets/images/red_line_gorizont.png">
+                <img class="video_description_line" src="../assets/images/red_line_gorizont.png">
                 <p class="video_description">With the entertaining and thematically rich
                     Inquisition, the Dragon Age series returns to
                     its former glory. Read Kevin's in-depth ...</p>
             </div>
         </div>
     </div>
+    </section>
 </div>
 <div id="faq_body" style="display: none">
-    <p class="headline"><span class="text_red"></span>F.A.Q</p>
+    <section>
+    <h1 class="headline"><span class="text_red"></span>F.A.Q</h1>
 
     <div id="form_for_search">
         <input type="text" class="place_for_search" id="search_input" value="" placeholder="Enter text..." autofocus>
 
         <button id="button_for_turn_back" value=" " title="Cancel search" onclick="turnBack()">
-            <img id="img_close" src="../accets/images/close.png">
+            <img id="img_close" src="../assets/images/close.png">
         </button>
 
-        <button id="button_search" type="submit" value=" " onclick="faqSearch()">
-            <div id="button_search_items"><img id="img_search" src="../accets/faq/search.png">Search</div>
+        <button id="button_search" type="submit" value=" " title="Search" onclick="faqSearch()">
+            <div id="button_search_items"><img id="img_search" src="../assets/faq/search.png">Search</div>
         </button>
     </div>
     <div id="faq_questions" class="faq_questions_block">
-        <img class="line_question" src="../accets/faq/line_question.png">
+        <img class="line_question" src="../assets/faq/line_question.png">
     </div>
-    <p class="headline"><span class="text_red">WRITE</span> US</p>
+    </section>
+
+    <section>
+    <h1 class="headline"><span class="text_red">WRITE</span> US</h1>
 
     <div id="message_sent" style="display: none"></div>
     <div id="feedback_form">
         <form>
-            <p class="feedback_form_text">*Name:</p>
+            <label for="name" class="feedback_form_text">*Name:</label>
             <span id="name_error" class="error_empty"></span>
-            <input type="text" class="feedback_user_data" name="name" autofocus>
+            <input id="name" type="text" class="feedback_user_data" name="name" autofocus>
 
-            <p class="feedback_form_text">*Email:</p>
+            <label for="email" class="feedback_form_text">*Email:</label>
             <span id="email_error" class="error_empty"></span>
-            <input type="text" class="feedback_user_data" name="email" autofocus>
+            <input id="email" type="text" class="feedback_user_data" name="email" autofocus>
 
-            <p class="feedback_form_text">Subject</p>
-            <input type="text" class="feedback_user_data" autofocus>
+            <label for="subject" class="feedback_form_text">Subject</label>
+            <input id="subject" type="text" class="feedback_user_data" autofocus>
 
             <p class="feedback_form_text">*Your message:</p>
             <span id="msg_error" class="error_empty"></span>
             <textarea class="feedback_user_message" tabindex="4" name="msg"></textarea>
 
             <button id="feedback_button" type="button" value=" " onclick="sentMessageSuccessfully(this.form)">
-                <div id="feedback_button_text">SEND</div>
+                <span id="feedback_button_text">SEND</span>
             </button>
         </form>
     </div>
+    </section>
 </div>
 <div id="card_body" style="display: none">
+    <section>
     <div id="card_block">
-        <p class="headline_left">ORDER</p>
+        <h1 class="headline_left">ORDER</h1>
+        <nav>
         <ul class="order_inform_block">
             <li class="order_inform">Backet</li>
             <li class="order_inform">Billing information</li>
             <li class="order_inform">Check order</li>
             <li class="order_inform">Order is processed</li>
         </ul>
-        <img class="line_question" src="../accets/faq/line_question.png">
+        <img class="line_question" src="../assets/faq/line_question.png">
         <p class="text_price_left">Price including VAT</p>
-        <img class="line_question" src="../accets/faq/line_question.png">
+        <img class="line_question" src="../assets/faq/line_question.png">
+        </nav>
     </div>
     <div id="order_block"></div>
     <div id="order_status">
@@ -176,13 +191,17 @@
             <button id="button_order_checkout" style="display: none">CONTINUE</button>
         </div>
     </div>
+    </section>
 </div>
+</main>
+<footer>
 <div class="footer">
     <div class="footer_info">
-        <p>2018-2019</p>
+        <time datetime="2019">2018-2019</time>
         <p class="footer_line">
         <p><span class="text_red">MADE BY</span> Pr1awrence</p>
     </div>
 </div>
+</footer>
 </body>
 </html>

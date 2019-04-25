@@ -8,11 +8,11 @@
 }
 
 #main_body {
-    background-image: url("../accets/background/back slider.png");
+    background-image: url("../assets/background/back slider.png");
 }
 
 .left {
-    background-image: url("../accets/slider/arrow_left.png");
+    background-image: url("../assets/slider/arrow_left.png");
     width: 96px;
     height: 96px;
     display: inline-block;
@@ -21,7 +21,7 @@
 }
 
 .right {
-    background-image: url("../accets/slider/arrow_right.png");
+    background-image: url("../assets/slider/arrow_right.png");
     width: 96px;
     height: 96px;
     display: inline-block;
@@ -34,7 +34,7 @@
         flex-flow: wrap;
     }
     .left {
-        background-image: url("../accets/slider/arrow_left_white.png");
+        background-image: url("../assets/slider/arrow_left_white.png");
         order: 1;
         margin-bottom: 30px;
     }
@@ -43,7 +43,7 @@
         order: 0;
     }
     .right {
-        background-image: url("../accets/slider/arrow_right_white.png");
+        background-image: url("../assets/slider/arrow_right_white.png");
         order: 2;
         margin-bottom: 30px;
     }

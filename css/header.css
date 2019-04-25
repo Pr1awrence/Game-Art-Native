@@ -12,7 +12,7 @@ body, p {
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
-    background-image: url("../accets/images/header_background_01.jpg");
+    background-image: url("../assets/images/header_background_01.jpg");
 }
 
 .red_line_menu{
@@ -43,7 +43,7 @@ body, p {
 @media screen and (max-width: 990px) {
     .header {
         align-items: left;
-        background-image: url("../accets/images/header_background_02_900_214.jpg");
+        background-image: url("../assets/images/header_background_02_900_214.jpg");
     }
     .logo {
         margin: 0 auto;
@@ -78,7 +78,7 @@ body, p {
 }
 
 #basket {
-    background-image: url("../accets/images/card.png");
+    background-image: url("../assets/images/card.png");
     position: relative;
     height: 62px;
     width: 77px;

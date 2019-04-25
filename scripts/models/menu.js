@@ -20,8 +20,6 @@ function showAnotherBody(id) {
             break;
         case menu.card:
             changeShowBody(id);
-            //need to change
-            //Visualizer.renderOrdersPage();
             break;
     }
 

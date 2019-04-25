@@ -1,0 +1,22 @@
+{
+  "name": "game-art-native",
+  "version": "0.0.1",
+  "description": "Games shop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pr1awrence/Game_Art.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pr1awrence/Game_Art/issues"
+  },
+  "homepage": "https://github.com/Pr1awrence/Game_Art#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
